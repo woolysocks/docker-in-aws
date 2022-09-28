@@ -6,7 +6,7 @@ LABEL application=todobackend
 RUN apk add --no-cache bash git
 
 # Install build dependencies
-RUN apk add --no-cache gcc python3-dev libffi-dev musl-dev linux-headers mariadb-dev
+RUN apk add --no-cache py3-pip gcc python3-dev libffi-dev musl-dev linux-headers mariadb-dev
 RUN pip3 install wheel -U
 
 # Copy requirements
@@ -29,7 +29,7 @@ FROM alpine
 LABEL application=todobackend
 
 # Install operating system dependencies
-RUN apk add --no-cache python3 mariadb-client bash curl bats jq
+RUN apk add --no-cache py3-pip python3 mariadb-client bash curl bats jq pcre
 
 # Create app user
 RUN addgroup -g 1000 app && \

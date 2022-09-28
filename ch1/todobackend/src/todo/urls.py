@@ -1,5 +1,5 @@
 
-from django.conf.urls import url, include
+from django.urls import re_path, include
 from todo import views
 from rest_framework.routers import DefaultRouter
 
@@ -9,5 +9,5 @@ router.register(r'todos', views.TodoItemViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    re_path(r'^', include(router.urls)),
 ]
