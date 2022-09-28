@@ -4,7 +4,7 @@ Code repository for Docker in AWS, published by Packt Publishing.
 
 ## Requirements
 
-- Docker 17.10 or higher
+- Docker 18.02 or higher
 - Docker Compose 1.18 or higher
 - Brew package manager (recommended for MacOS)
 - GNU Make 3.82 or higher (note that MacOS ships with version 3.81)
